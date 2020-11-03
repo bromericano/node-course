@@ -1,0 +1,4 @@
+const book = {
+    title: '',
+    author: ''
+}
