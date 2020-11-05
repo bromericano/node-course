@@ -18,3 +18,4 @@ const data = JSON.parse(dataJSON);
 data.name = "Luke";
 data.age = 28;
 fs.writeFileSync('1-json.json', JSON.stringify(data));
+
