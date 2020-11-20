@@ -19,7 +19,7 @@ const forecast = require('./utils/forecast')
 // const geocodeurl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoiYnJvbWVyaWNhbm8iLCJhIjoiY2toaGZvdWtqMGl2eDJybnFhYm9qZWlpMSJ9.19GpgPl9eynN2-z8nNrkdw&limit=1'
 // request({ url: geocodeurl, json: true }, (error, response) => {
 //     if (error) {
-//         console.log('Unable to connect to network.')
+//         console.log('Unable to connect to network. Please check your connection')
 //     } else if (response.body.message) {
 //         console.log(response.body.message)
 //     } else {
