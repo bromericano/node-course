@@ -8,16 +8,16 @@ if(!address) {
     console.log('Please enter a location')
 } else {
     // geocode looks up location information (latitude and longitude)
-    geocode(address, (error, data) => {
+    geocode(address, (error, {latitude, longitude, location} = {}) => {
         if(error) {
             return console.log(error)
         }
         // forecast uses the lat,long from geocode to get weather data
-        forecast(data.latitude, data.longitude, (error, forecastData) => {
+        forecast(latitude, longitude, (error, forecastData) => {
             if(error) {
                 return console.log(error)
             }
-            console.log(data.location)
+            console.log(location)
             console.log(forecastData)
         })
     })
