@@ -2,12 +2,35 @@ const path = require('path')
 const express = require('express');
 
 const app = express();
+
+//Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
 
+//Set handlebar engine
+app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPath))
 
-app.get('', (req,res) => {
-    res.send('<h1>Hello</h1>')
+//Set up static directory
+app.get('', (req, res) => {
+    res.render('index', {
+        title: 'Weather App',
+        name: 'Luke G'
+    })
+})
+
+app.get('/about', (req, res) => {
+    res.render('about', {
+        title: 'About',
+        name: 'Luke G'
+    })
+})
+
+app.get('/help', (req,res) => {
+    res.render('help', {
+        title: 'Help',
+        name: 'Luke G',
+        message: 'This is your help message'
+    })
 })
 
 app.get('/weather', (req, res) => {
